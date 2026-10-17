@@ -1,0 +1,22 @@
+# Local credentials and machine files
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+.DS_Store
+Thumbs.db
+Desktop.ini
+# Local tooling, previews and editor state
+node_modules/
+__pycache__/
+*.pyc
+*.log
+.vscode/
+.idea/
+PREVIEW.html
+*-Preview.html
+playwright-report/
+test-results/
