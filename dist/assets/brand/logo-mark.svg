@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 305 210" role="img" aria-label="PTS monogram"><defs>
+<linearGradient id="silver" x1="0" y1="0" x2=".15" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#ffffff"/><stop offset=".43" stop-color="#c7d6df"/><stop offset=".49" stop-color="#f2f7fa"/><stop offset="1" stop-color="#899da9"/></linearGradient>
+<linearGradient id="blue" x1="0" y1="0" x2=".2" y2="1"><stop stop-color="#49dfff"/><stop offset=".20" stop-color="#00bfff"/><stop offset=".65" stop-color="#0098ed"/><stop offset="1" stop-color="#0069ba"/></linearGradient>
+<linearGradient id="crossbar" x1="0" y1="0" x2=".58" y2="1"><stop stop-color="#f8fcff"/><stop offset=".32" stop-color="#dce8ee"/><stop offset=".50" stop-color="#17c8ff"/><stop offset="1" stop-color="#007acc"/></linearGradient>
+<linearGradient id="ring" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#70e6ff"/><stop offset=".4" stop-color="#00aaff"/><stop offset=".7" stop-color="#0076d4"/><stop offset="1" stop-color="#00d4ff"/></linearGradient>
+</defs><g transform="translate(-111 -51)">
+<path d="M177 107C195 77 225 57 259 57C295 56 325 75 347 107L334 107C315 82 290 69 260 69C231 69 207 82 191 107Z" fill="url(#ring)" stroke="#67dcff" stroke-width="1.2"/>
+<path d="M168 188L180 188C194 222 225 243 260 243C285 243 308 233 325 218H339C319 240 291 253 260 253C218 253 182 227 168 188Z" fill="url(#ring)" stroke="#58d7ff" stroke-width="1.2"/>
+<path d="M165 145H176L175 151H164Z" fill="#0098e7"/>
+<path d="M143 115H329L308 136H271L266 195L243 218L249 136H121Z" fill="url(#crossbar)" stroke="#b5ebff" stroke-width=".8"/>
+<path d="M209 145H230C229 165 219 178 200 178H143L141 200L130 210H118L121 166L130 158H197C204 158 208 154 209 145Z" fill="url(#silver)" stroke="#f4fbff" stroke-width="1.1"/>
+<path d="M340 115H406L385 136H320Z" fill="url(#silver)" stroke="#cfedff" stroke-width="1"/>
+<path d="M287 145H308C308 150 312 152 321 152H374C391 152 399 161 398 175C397 196 387 209 367 209H272L293 189H365C372 189 375 186 375 180C375 176 372 173 366 173H309C293 173 284 165 287 145Z" fill="url(#blue)" stroke="#38d9ff" stroke-width="1.1"/>
+</g></svg>
