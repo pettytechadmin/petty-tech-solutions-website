@@ -54,6 +54,14 @@
       if (!response.ok) throw new Error("Request not accepted");
       status.textContent = "Thanks! We've received your request. Petty Tech Solutions will be in touch soon.";
       form.reset(); phone.setCustomValidity("");
+      // Count only accepted contact requests. Tracking must never affect form success.
+      try {
+        if (typeof window.gtag === "function") {
+          window.gtag("event", "conversion", {
+            send_to: "AW-18539183590/x4WfCIvMuq0dEOb7lYhF"
+          });
+        }
+      } catch { /* Keep the successful submission experience if tracking is blocked. */ }
     } catch {
       status.textContent = "We couldn't send your request. Please try again or call us at (469) 732-7955.";
     } finally {
