@@ -1699,3 +1699,22 @@ fieldset:disabled input,fieldset:disabled select,fieldset:disabled textarea {
 .remote-steps h3 { margin-bottom:8px; }
 .remote-steps p { margin-top:0; }
 @media(max-width:760px) { .remote-card,.remote-service-list,.remote-steps { grid-template-columns:1fr; } .remote-card { gap:10px; } .remote-price { width:100%; } }
+
+/* Give team photos more room on phones without changing desktop sizing. */
+@media (max-width:760px) {
+  .hero-grid > .team-frame,
+  .about-grid > .team-frame {
+    width:calc(100% + 24px);
+    max-width:none;
+    margin-inline:-12px;
+    justify-self:stretch;
+  }
+  .team-frame .team-photo { width:100%; max-width:none; height:auto; }
+}
+@media (max-width:460px) {
+  .hero-grid > .team-frame,
+  .about-grid > .team-frame {
+    width:calc(100% + 20px);
+    margin-inline:-10px;
+  }
+}
