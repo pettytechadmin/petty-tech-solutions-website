@@ -13,6 +13,20 @@
   document.addEventListener("click", (event) => { if (!event.target.closest(".header")) closeMenu(); });
   document.querySelectorAll("[data-year]").forEach(el => { el.textContent = new Date().getFullYear(); });
   document.querySelectorAll("[data-service]").forEach(link => link.addEventListener("click", () => { document.querySelector("#service").value = link.dataset.service; }));
+  function trackContactConversion() {
+    try {
+      if (typeof window.gtag === "function") {
+        window.gtag("event", "conversion", {
+          send_to: "AW-18539183590/x4WfCIvMuq0dEOb7lYhF"
+        });
+      }
+    } catch { /* Tracking failures must not interrupt contact actions. */ }
+  }
+
+  document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+    link.addEventListener("click", trackContactConversion);
+  });
+
   const form = document.querySelector("#help-form");
   if (!form) return;
   const status = document.querySelector("#form-status");
@@ -54,14 +68,7 @@
       if (!response.ok) throw new Error("Request not accepted");
       status.textContent = "Thanks! We've received your request. Petty Tech Solutions will be in touch soon.";
       form.reset(); phone.setCustomValidity("");
-      // Count only accepted contact requests. Tracking must never affect form success.
-      try {
-        if (typeof window.gtag === "function") {
-          window.gtag("event", "conversion", {
-            send_to: "AW-18539183590/x4WfCIvMuq0dEOb7lYhF"
-          });
-        }
-      } catch { /* Keep the successful submission experience if tracking is blocked. */ }
+      trackContactConversion();
     } catch {
       status.textContent = "We couldn't send your request. Please try again or call us at (469) 732-7955.";
     } finally {
